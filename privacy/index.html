@@ -5,24 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stozhary: політика конфіденційності / Privacy Policy</title>
 <meta name="description" content="Політика конфіденційності застосунку Stozhary. Privacy Policy of the Stozhary app.">
-<style>
-:root{--bg:#fbfaf7;--fg:#1c1f24;--muted:#5b616b;--line:#e3e0d8;--accent:#1f4e8c}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--fg:#e8e6e1;--muted:#a0a6ae;--line:#2b2f35;--accent:#8fb4ec}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-main{max-width:720px;margin:0 auto;padding:32px 16px 64px}
-h1{font-size:1.8em;line-height:1.25;margin:0 0 .3em}
-h2{font-size:1.25em;margin:2em 0 .4em}
-p,li{margin:.4em 0}
-ul{padding-left:1.2em}
-a{color:var(--accent)}
-.muted{color:var(--muted);font-size:.92em}
-.lang{margin:0 0 2em;font-size:.95em}
-hr{border:0;border-top:1px solid var(--line);margin:3em 0}
-</style>
+<meta name="theme-color" content="#12132B">
+<link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
+<canvas id="sky" aria-hidden="true"></canvas>
 <main>
+<div class="sheet">
+<div class="brand">Stozhary</div>
 <p class="lang"><a href="#en">English version below</a> · <a href="../">Stozhary</a></p>
 
 <h1>Політика конфіденційності Stozhary</h1>
@@ -70,10 +60,10 @@ hr{border:0;border-top:1px solid var(--line);margin:3em 0}
 
 <h2>Контакти</h2>
 <p>Адреса для листів з’явиться тут найближчим часом.</p>
+</div>
 
-<hr>
-
-<div id="en" lang="en">
+<div class="sheet" id="en" lang="en">
+<div class="brand">Stozhary</div>
 <h1>Stozhary Privacy Policy</h1>
 <p class="muted">Effective 10 October 2026.</p>
 
@@ -121,5 +111,6 @@ hr{border:0;border-top:1px solid var(--line);margin:3em 0}
 <p>An email address will appear here shortly.</p>
 </div>
 </main>
+<script src="../assets/sky.js"></script>
 </body>
 </html>

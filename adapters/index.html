@@ -5,25 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stozhary: OBD-адаптери / OBD adapters</title>
 <meta name="description" content="Який OBD-II адаптер підходить до Stozhary на iPhone і як його підключити. Which OBD-II adapter works with Stozhary on iPhone and how to connect it.">
-<style>
-:root{--bg:#fbfaf7;--fg:#1c1f24;--muted:#5b616b;--line:#e3e0d8;--accent:#1f4e8c}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--fg:#e8e6e1;--muted:#a0a6ae;--line:#2b2f35;--accent:#8fb4ec}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-main{max-width:720px;margin:0 auto;padding:32px 16px 64px}
-h1{font-size:1.8em;line-height:1.25;margin:0 0 .3em}
-h2{font-size:1.25em;margin:2em 0 .4em}
-p,li{margin:.4em 0}
-ul,ol{padding-left:1.2em}
-a{color:var(--accent)}
-.muted{color:var(--muted);font-size:.92em}
-.lang{margin:0 0 2em;font-size:.95em}
-hr{border:0;border-top:1px solid var(--line);margin:3em 0}
-.box{border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:1em 0}
-</style>
+<meta name="theme-color" content="#12132B">
+<link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
+<canvas id="sky" aria-hidden="true"></canvas>
 <main>
+<div class="sheet">
+<div class="brand">Stozhary</div>
 <p class="lang"><a href="#en">English version below</a> · <a href="../">Stozhary</a></p>
 
 <h1>OBD-адаптер для Stozhary</h1>
@@ -57,10 +46,10 @@ hr{border:0;border-top:1px solid var(--line);margin:3em 0}
 <li>З адаптера застосунок бере лише швидкість, рівень пального, температуру повітря й напругу акумулятора. Ці дані лишаються на телефоні, див. <a href="../privacy/">політику конфіденційності</a>.</li>
 <li>Застосунок нічого не записує в блоки керування авто.</li>
 </ul>
+</div>
 
-<hr>
-
-<div id="en" lang="en">
+<div class="sheet" id="en" lang="en">
+<div class="brand">Stozhary</div>
 <h1>OBD adapter for Stozhary</h1>
 <p>The adapter plugs into the car's diagnostic port and gives the app the speed from the wheel sensors. That speed does not depend on GPS and does not build up error, so without GPS the position is most accurate with an adapter. On our drives with an adapter, Stozhary kept the car on the right road more than 95% of the time without GPS; without one, accuracy is much lower.</p>
 <p>OBD is free during launch.</p>
@@ -94,5 +83,6 @@ hr{border:0;border-top:1px solid var(--line);margin:3em 0}
 </ul>
 </div>
 </main>
+<script src="../assets/sky.js"></script>
 </body>
 </html>

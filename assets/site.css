@@ -1,0 +1,40 @@
+/* Night sky behind a readable column: brand indigo, star white, road gold, driver blue. */
+:root{
+  --sky:#12132B; --sky-deep:#070818; --star:#EEEDFE; --muted:#A9A8CF;
+  --road:#FFD34E; --driver:#59B8FF; --panel:rgba(14,15,36,.74); --line:rgba(156,134,255,.22);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--sky-deep)}
+body{margin:0;background:var(--sky-deep);color:var(--star);
+  font:17px/1.62 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+  padding-inline:16px;min-height:100vh}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block;pointer-events:none}
+main{position:relative;z-index:1;max-width:720px;margin:0 auto;padding-block:40px 72px}
+.sheet{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px 24px 32px;
+  -webkit-backdrop-filter:blur(8px) saturate(120%);backdrop-filter:blur(8px) saturate(120%)}
+.sheet + .sheet{margin-top:28px}
+@media (min-width:640px){.sheet{padding:40px 44px 44px}}
+h1{font-size:clamp(1.7em,4.5vw,2.2em);line-height:1.2;margin:0 0 .35em;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:1.2em;margin:1.9em 0 .4em;color:var(--star);text-wrap:balance}
+p,li{margin:.45em 0}
+ul,ol{padding-left:1.25em}
+strong{color:#fff}
+a{color:var(--driver);text-underline-offset:3px}
+a:hover{color:#8fd0ff}
+a:focus-visible{outline:2px solid var(--road);outline-offset:3px;border-radius:3px}
+.muted{color:var(--muted);font-size:.92em}
+.lang{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;font-size:.92em;letter-spacing:.02em}
+.lang a{color:var(--muted)}
+hr{display:none}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8em;color:var(--road);margin-bottom:14px}
+.brand::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--driver);box-shadow:0 0 0 4px rgba(89,184,255,.22)}
+.hero{padding-block:12vh 4vh}
+.hero h1{font-size:clamp(2.4em,9vw,4em);letter-spacing:.06em;margin:0}
+.hero p{font-size:1.15em;color:var(--muted);max-width:28em;text-shadow:0 1px 12px rgba(7,8,24,.9)}
+.links{list-style:none;padding:0;display:grid;gap:12px;margin-top:28px}
+.links a{display:block;padding:16px 20px;border-radius:14px;background:var(--panel);border:1px solid var(--line);
+  color:var(--star);text-decoration:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.links a:hover{border-color:rgba(255,211,78,.55)}
+.links span{display:block;color:var(--muted);font-size:.88em}
+.box{border:1px solid rgba(255,211,78,.35);background:rgba(255,211,78,.06);border-radius:12px;padding:10px 16px;margin:.8em 0}
