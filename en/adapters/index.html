@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OBD adapters · Stozhary</title>
+<meta name="description" content="Which OBD adapters work with Stozhary and how to connect them.">
+<meta name="theme-color" content="#12132B">
+<link rel="alternate" hreflang="uk" href="https://structuredwriter.github.io/stozhary-site/adapters/">
+<link rel="alternate" hreflang="en" href="https://structuredwriter.github.io/stozhary-site/en/adapters/">
+<link rel="alternate" hreflang="x-default" href="https://structuredwriter.github.io/stozhary-site/en/adapters/">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<header class="top">
+<a class="logo" href="../../en/"><span class="dot"></span>Stozhary</a>
+<nav aria-label="Sections"><a href="../../en/adapters/" aria-current="page">OBD adapters</a><a href="../../en/support/">Support</a><a href="../../en/privacy/">Privacy</a></nav>
+<div class="langs"><a href="../../adapters/" hreflang="uk" lang="uk" data-lang="uk">УКР</a><span aria-current="true">ENG</span></div>
+<a class="mail" href="mailto:stozhary.support@gmail.com">stozhary.support@gmail.com</a>
+</header>
+<main>
+<div class="sheet">
+<h1>OBD adapter for Stozhary</h1>
+<p>The adapter plugs into the car's diagnostic port and gives the app the speed from the wheel sensors. That speed does not depend on GPS and does not build up error, so without GPS the position is most accurate with an adapter. On our drives with an adapter, Stozhary kept the car on the right road more than 95% of the time without GPS; without one, accuracy is much lower.</p>
+<p>OBD is free during launch.</p>
+
+<h2>Which adapter works</h2>
+<div class="box">
+<p><strong>You need an ELM327 with Bluetooth LE</strong> (look for "BLE" or "Bluetooth 4.0" or later in the name or description).</p>
+</div>
+<p>The iPhone connects only to Bluetooth LE adapters. Apple allows ordinary Bluetooth accessories (Bluetooth 2.0/3.0) only from makers in its MFi program, so the iPhone does not see the cheap "classic" ELM327 adapters, though they work on Android. Wi-Fi adapters are not supported.</p>
+<ul>
+<li><strong>Vgate iCar Pro BLE 4.0</strong>: the app was developed and tested with it.</li>
+<li><strong>OBDLink CX</strong>: should work; we have not tested it in our own car.</li>
+<li>Other ELM327 BLE adapters: most should work. If yours does not connect, tell us through <a href="../support/">support</a> and include its name.</li>
+</ul>
+<p>Most cars have an OBD-II port (petrol cars from 2001, diesels from 2004, with some exceptions). It is usually under the steering wheel, to the left of the driver's feet.</p>
+
+<h2>How to connect</h2>
+<ol>
+<li>Plug the adapter into the OBD-II port.</li>
+<li>Turn the ignition on or start the engine.</li>
+<li>In Stozhary open Settings → OBD-II adapter → "Scan for adapters" and pick yours. Nothing needs doing in the iPhone's own Bluetooth settings.</li>
+<li>For the first 5 minutes, drive with GPS at 30 km/h or more. In that time the app learns how much your car under- or over-reports its speed (many cars are off by a few percent).</li>
+</ol>
+<p>After that the app connects on its own whenever you turn the ignition on.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>With the engine off the app barely talks to the adapter so it does not drain the battery. If the car stands for several days, unplug the adapter.</li>
+<li>The app reads only speed, fuel level, outside temperature and battery voltage from the adapter. That data stays on the phone; see the <a href="../privacy/">privacy policy</a>.</li>
+<li>The app writes nothing to the car's control units.</li>
+</ul>
+</div>
+</main>
+<script src="../../assets/sky.js"></script>
+</body>
+</html>

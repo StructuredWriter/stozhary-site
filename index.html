@@ -4,15 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stozhary</title>
-<meta name="description" content="Stozhary — навігатор, що працює і без GPS. Navigates even without GPS.">
+<meta name="description" content="Stozhary — навігатор, що працює і без GPS.">
 <meta name="theme-color" content="#12132B">
+<link rel="alternate" hreflang="uk" href="https://structuredwriter.github.io/stozhary-site/">
+<link rel="alternate" hreflang="en" href="https://structuredwriter.github.io/stozhary-site/en/">
+<link rel="alternate" hreflang="x-default" href="https://structuredwriter.github.io/stozhary-site/en/">
+<script>
+(function(){var c;try{c=localStorage.getItem('stozhary-lang')}catch(e){}
+if(location.hash==='#en')c='en';
+if(!c){var ls=navigator.languages||[navigator.language||''],uk=false;for(var i=0;i<ls.length;i++){if(/^uk/i.test(ls[i]))uk=true}
+c=(uk||/^(ru|be)/i.test(ls[0]||''))?'uk':'en'}
+if(c==='en')location.replace('en/'+(location.hash==='#en'?'':location.hash))})();
+</script>
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <canvas id="sky" data-focus="side" aria-hidden="true"></canvas>
 <header class="top">
-<a class="logo" href="./"><span class="dot"></span>Stozhary</a>
+<a class="logo" href=""><span class="dot"></span>Stozhary</a>
 <nav aria-label="Розділи"><a href="adapters/">OBD-адаптери</a><a href="support/">Підтримка</a><a href="privacy/">Конфіденційність</a></nav>
+<div class="langs"><span aria-current="true">УКР</span><a href="en/" hreflang="en" lang="en" data-lang="en">ENG</a></div>
 <a class="mail" href="mailto:stozhary.support@gmail.com">stozhary.support@gmail.com</a>
 </header>
 <main>
@@ -20,12 +31,11 @@
 <div class="brand">Офлайн-навігатор для України</div>
 <h1>Stozhary</h1>
 <p>Навігатор, що працює і без GPS. Коли сигнал глушать або підміняють, веде за датчиками телефона й мапою, яка вже є в застосунку.</p>
-<p lang="en">Navigates even without GPS. When the signal is jammed or spoofed, it keeps guiding from the phone's sensors and the map built into the app.</p>
 </section>
 <ul class="links">
-<li><a href="adapters/">OBD-адаптери / OBD adapters<span>Який адаптер підходить і як його підключити</span></a></li>
-<li><a href="support/">Підтримка / Support<span>Часті запитання й контакт</span></a></li>
-<li><a href="privacy/">Політика конфіденційності / Privacy Policy<span>Що застосунок зберігає і що виходить за межі телефона</span></a></li>
+<li><a href="adapters/">OBD-адаптери<span>Який адаптер підходить і як його підключити</span></a></li>
+<li><a href="support/">Підтримка<span>Часті запитання й контакт</span></a></li>
+<li><a href="privacy/">Політика конфіденційності<span>Що застосунок зберігає і що виходить за межі телефона</span></a></li>
 </ul>
 </main>
 <script src="assets/sky.js"></script>

@@ -3,9 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Stozhary: підтримка / Support</title>
-<meta name="description" content="Підтримка застосунку Stozhary. Support for the Stozhary app.">
+<title>Підтримка · Stozhary</title>
+<meta name="description" content="Підтримка застосунку Stozhary.">
 <meta name="theme-color" content="#12132B">
+<link rel="alternate" hreflang="uk" href="https://structuredwriter.github.io/stozhary-site/support/">
+<link rel="alternate" hreflang="en" href="https://structuredwriter.github.io/stozhary-site/en/support/">
+<link rel="alternate" hreflang="x-default" href="https://structuredwriter.github.io/stozhary-site/en/support/">
+<script>
+(function(){var c;try{c=localStorage.getItem('stozhary-lang')}catch(e){}
+if(location.hash==='#en')c='en';
+if(!c){var ls=navigator.languages||[navigator.language||''],uk=false;for(var i=0;i<ls.length;i++){if(/^uk/i.test(ls[i]))uk=true}
+c=(uk||/^(ru|be)/i.test(ls[0]||''))?'uk':'en'}
+if(c==='en')location.replace('../en/support/'+(location.hash==='#en'?'':location.hash))})();
+</script>
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -13,12 +23,11 @@
 <header class="top">
 <a class="logo" href="../"><span class="dot"></span>Stozhary</a>
 <nav aria-label="Розділи"><a href="../adapters/">OBD-адаптери</a><a href="../support/" aria-current="page">Підтримка</a><a href="../privacy/">Конфіденційність</a></nav>
+<div class="langs"><span aria-current="true">УКР</span><a href="../en/support/" hreflang="en" lang="en" data-lang="en">ENG</a></div>
 <a class="mail" href="mailto:stozhary.support@gmail.com">stozhary.support@gmail.com</a>
 </header>
 <main>
 <div class="sheet">
-<p class="lang"><a href="#en">English version below</a></p>
-
 <h1>Підтримка Stozhary</h1>
 <p>Питання, помилка чи пропозиція? Напишіть на <a href="mailto:stozhary.support@gmail.com">stozhary.support@gmail.com</a>. Відповідаємо українською або англійською.</p>
 <p>Якщо пишете про помилку, вкажіть модель iPhone, версію iOS, версію застосунку (Налаштування → Про застосунок) і що саме сталося: де, коли і що ви бачили на екрані.</p>
@@ -34,25 +43,6 @@
 
 <h2>Дані мапи</h2>
 <p>© учасники <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, ліцензія ODbL. Вигляд мапи: OpenFreeMap / OpenMapTiles.</p>
-</div>
-
-<div class="sheet" id="en" lang="en">
-<h1>Stozhary Support</h1>
-<p>A question, a bug or an idea? Write to <a href="mailto:stozhary.support@gmail.com">stozhary.support@gmail.com</a>. We answer in Ukrainian or English.</p>
-<p>When reporting a bug, include your iPhone model, iOS version, app version (Settings → About) and what happened: where, when and what you saw on screen.</p>
-
-<h2>Frequently asked questions</h2>
-<p><strong>Does it need internet?</strong> No. The map of all of Ukraine, search and routing are built in. With a connection the app only downloads a more detailed map look.</p>
-<p><strong>How does it guide without GPS?</strong> When GPS is lost or gives a false position, the app works out where you are going from the phone's gyroscope, accelerometer and compass and matches your position to the roads. The circle around your position shows how well it is known.</p>
-<p><strong>Which OBD-II adapter works?</strong> An ELM327 with Bluetooth LE (Bluetooth 4.0 or later). It gives the speed from the car's wheels, which makes the position without GPS much more accurate. OBD is free during launch. See <a href="../adapters/#en">OBD adapters</a> for details.</p>
-<p><strong>How do I delete my data?</strong> Settings → Privacy → "Forget everything". See the <a href="../privacy/#en">privacy policy</a> for details.</p>
-<p><strong>Which devices are supported?</strong> iPhone with iOS 16 or later.</p>
-
-<p class="muted">Developer: Vladyslav Kyselevych</p>
-
-<h2>Map data</h2>
-<p>© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, licensed under ODbL. Map tiles: OpenFreeMap / OpenMapTiles.</p>
-
 </div>
 </main>
 <script src="../assets/sky.js"></script>

@@ -3,9 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Stozhary: політика конфіденційності / Privacy Policy</title>
-<meta name="description" content="Політика конфіденційності застосунку Stozhary. Privacy Policy of the Stozhary app.">
+<title>Політика конфіденційності · Stozhary</title>
+<meta name="description" content="Політика конфіденційності застосунку Stozhary.">
 <meta name="theme-color" content="#12132B">
+<link rel="alternate" hreflang="uk" href="https://structuredwriter.github.io/stozhary-site/privacy/">
+<link rel="alternate" hreflang="en" href="https://structuredwriter.github.io/stozhary-site/en/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://structuredwriter.github.io/stozhary-site/en/privacy/">
+<script>
+(function(){var c;try{c=localStorage.getItem('stozhary-lang')}catch(e){}
+if(location.hash==='#en')c='en';
+if(!c){var ls=navigator.languages||[navigator.language||''],uk=false;for(var i=0;i<ls.length;i++){if(/^uk/i.test(ls[i]))uk=true}
+c=(uk||/^(ru|be)/i.test(ls[0]||''))?'uk':'en'}
+if(c==='en')location.replace('../en/privacy/'+(location.hash==='#en'?'':location.hash))})();
+</script>
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -13,12 +23,11 @@
 <header class="top">
 <a class="logo" href="../"><span class="dot"></span>Stozhary</a>
 <nav aria-label="Розділи"><a href="../adapters/">OBD-адаптери</a><a href="../support/">Підтримка</a><a href="../privacy/" aria-current="page">Конфіденційність</a></nav>
+<div class="langs"><span aria-current="true">УКР</span><a href="../en/privacy/" hreflang="en" lang="en" data-lang="en">ENG</a></div>
 <a class="mail" href="mailto:stozhary.support@gmail.com">stozhary.support@gmail.com</a>
 </header>
 <main>
 <div class="sheet">
-<p class="lang"><a href="#en">English version below</a></p>
-
 <h1>Політика конфіденційності Stozhary</h1>
 <p class="muted">Набуває чинності 10 жовтня 2026 року.</p>
 
@@ -63,54 +72,6 @@
 <p>Якщо політика зміниться, нова версія з’явиться на цій сторінці з датою набуття чинності.</p>
 
 <h2>Контакти</h2>
-<p>Vladyslav Kyselevych, <a href="mailto:stozhary.support@gmail.com">stozhary.support@gmail.com</a></p>
-</div>
-
-<div class="sheet" id="en" lang="en">
-<h1>Stozhary Privacy Policy</h1>
-<p class="muted">Effective 10 October 2026.</p>
-
-<p><strong>Stozhary</strong> is a navigator for drivers that works without internet and without GPS. This policy explains what data the app uses, where it is kept and what leaves the phone.</p>
-
-<p><strong>In short.</strong> The app has no server of its own, no account, no ads, no analytics and no third-party tracking. Your trips, places and position are not sent to the developer and are not sold to anyone.</p>
-
-<h2>What the app uses on the phone</h2>
-<ul>
-<li><strong>Location</strong>, to show where you are, plan a route and guide you along it, including in the background while guiding. When GPS is lost or spoofed, the app works out your position itself.</li>
-<li><strong>Motion sensors</strong> (gyroscope, accelerometer, compass), to track your way without GPS.</li>
-<li><strong>Bluetooth</strong>, only if you connect an OBD-II adapter: the app reads the car's speed and battery voltage from it and, if the car reports them, the fuel level and outside air temperature. The app writes nothing to the car's control units.</li>
-<li><strong>Camera</strong>, only when you point it at a street name sign yourself so the app can tell where you are. The text is read on the phone; the photo is not kept or sent anywhere.</li>
-</ul>
-
-<h2>What is kept on the phone</h2>
-<ul>
-<li>recent destinations;</li>
-<li>home and work, if you saved them;</li>
-<li>where you were last (to resume guidance after a restart without GPS);</li>
-<li>speeds on the roads you drive;</li>
-<li>drive recordings, if recording is on;</li>
-<li>the app log;</li>
-<li>settings and the downloaded map.</li>
-</ul>
-<p>All of this stays on the phone. Drive recordings older than the chosen period (30 days by default) are deleted automatically. The "Don't remember places" switch stops the app from keeping recent places and the last position. Everything except the map and settings can be deleted in Settings → Privacy → "Forget everything"; deleting the app deletes everything.</p>
-<p>Drive recordings and the log are not included in backups. Recent places, home, work and the last position go into the phone's iCloud or computer backup, like other apps' data; "Forget everything" removes them from the phone, not from backups already made.</p>
-
-<h2>What leaves the phone</h2>
-<ul>
-<li><strong>Map tiles.</strong> The detailed map (buildings, parks, names) is downloaded from OpenFreeMap (tiles.openfreemap.org) when there is a connection: for your region and along your routes. Like any web server, OpenFreeMap sees your IP address and which map areas were requested. With the Eclipse map look, tiles come from VersaTiles (tiles.versatiles.org). Roads, search and routing work offline without these requests.</li>
-<li><strong>Short map links.</strong> If you paste a short Google Maps link (maps.app.goo.gl) into search, the app asks Google where it leads. Nothing else is sent with that request.</li>
-<li><strong>When you share.</strong> "Share arrival time" passes text through the standard iOS share menu only to whoever you choose.</li>
-<li><strong>Apple.</strong> If you allowed sharing analytics with app developers in iPhone settings, Apple passes anonymised crash reports to the developer. Apple controls this, not the app.</li>
-<li>The link to OpenStreetMap's copyright page opens in the browser only when you tap it.</li>
-</ul>
-
-<h2>Children</h2>
-<p>The app is meant for drivers and is not directed at children.</p>
-
-<h2>Changes</h2>
-<p>If this policy changes, the new version will appear on this page with its effective date.</p>
-
-<h2>Contact</h2>
 <p>Vladyslav Kyselevych, <a href="mailto:stozhary.support@gmail.com">stozhary.support@gmail.com</a></p>
 </div>
 </main>

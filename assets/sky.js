@@ -1,3 +1,8 @@
+// Remember the language picked in the header, so /privacy/ stops redirecting.
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[data-lang]');
+  if (a) { try { localStorage.setItem('stozhary-lang', a.getAttribute('data-lang')); } catch (_) {} }
+});
 // Night sky behind the Stozhary pages: one endless camera drift through stars
 // toward the Pleiades, the road running through stars 5, 7 and 2, the compass
 // ring hunting north around the driver. Brand geometry from docs/brand.
