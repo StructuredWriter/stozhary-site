@@ -57,14 +57,7 @@ document.addEventListener('click', function (e) {
 
     // Base sky
     var fx = W * 0.5, fy = H * 0.42;
-    var gutter = 0, sizeK = 0;
-    var col = document.querySelector('main');
-    if (col && W >= 900) {
-      var r = col.getBoundingClientRect();
-      gutter = W - r.right;
-      if (gutter >= 220) { fx = r.right + gutter * 0.5; fy = H * 0.5; sizeK = Math.min(gutter * 0.9 / 60, H * 0.0072); }
-    }
-    if (!sizeK && canvas.getAttribute('data-focus') === 'side' && W < 900) { fy = H * 0.8; }
+    if (canvas.getAttribute('data-focus') === 'side') { if (W >= 900) { fx = W * 0.73; fy = H * 0.46; } else { fy = H * 0.8; } }
     var bg = ctx.createRadialGradient(fx, fy, 0, fx, fy, Math.max(W, H) * 0.8);
     bg.addColorStop(0, '#1b1c48'); bg.addColorStop(0.55, '#12132B'); bg.addColorStop(1, '#070818');
     ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
@@ -117,7 +110,7 @@ document.addEventListener('click', function (e) {
     }
 
     // The Pleiades: brand box, slow breathing zoom and sway
-    var unit = (sizeK || Math.min(W, H) * (W < 640 ? 0.0068 : 0.0056)) * (1 + 0.045 * Math.sin(t * 0.16));
+    var unit = Math.min(W, H) * (W < 640 ? 0.0068 : 0.0056) * (1 + 0.045 * Math.sin(t * 0.16));
     var sway = 0.05 * Math.sin(t * 0.07);
     ctx.save();
     ctx.translate(cx, cy); ctx.rotate(sway); ctx.scale(unit, unit); ctx.translate(-50, -50);
