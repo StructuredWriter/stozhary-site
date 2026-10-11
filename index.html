@@ -16,12 +16,16 @@ if(!c){var ls=navigator.languages||[navigator.language||''],uk=false;for(var i=0
 c=(uk||/^(ru|be)/i.test(ls[0]||''))?'uk':'en'}
 if(c==='en')location.replace('en/'+(location.hash==='#en'?'':location.hash))})();
 </script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:image" content="https://structuredwriter.github.io/stozhary-site/assets/icon-512.png">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <canvas id="sky" data-focus="side" aria-hidden="true"></canvas>
 <header class="top">
-<a class="logo" href=""><span class="dot"></span>Stozhary</a>
+<a class="logo" href=""><img class="mark" src="assets/icon-64.png" alt="" width="28" height="28">Stozhary</a>
 <nav aria-label="Розділи"><a href="adapters/">OBD-адаптери</a><a href="support/">Підтримка</a><a href="privacy/">Конфіденційність</a></nav>
 <div class="langs"><span aria-current="true">УКР</span><a href="en/" hreflang="en" lang="en" data-lang="en">ENG</a></div>
 <a class="mail" href="mailto:stozhary.support@gmail.com">stozhary.support@gmail.com</a>

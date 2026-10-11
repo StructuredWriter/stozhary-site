@@ -62,3 +62,4 @@ main{padding-block:28px 72px}
 .top .mail{margin-left:auto;order:3}
 .top .langs{margin-left:0;order:4}
 @media (max-width:900px){.top .langs{margin-left:auto;order:2}.top nav{order:3;flex-basis:100%}.top .mail{margin-left:0;order:4;flex-basis:100%}}
+.top .mark{width:28px;height:28px;border-radius:7px;box-shadow:0 0 0 1px rgba(156,134,255,.35),0 0 18px rgba(89,184,255,.25)}
